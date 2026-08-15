@@ -1,0 +1,15 @@
+def add(a, b):
+    return a + b
+
+
+def is_even(n):
+    return n % 2 == 0
+
+
+def factorial(n):
+    if n <= 1:
+        return 1
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
