@@ -19,5 +19,30 @@ this completes all four heartbeats: in-session, conditional, scheduled,
 and event-driven.
 
 ## Status
-Not yet implemented — scaffold only. Requires a real GitHub repo (not just
-a local folder) to receive PR webhook events.
+✅ Implemented & verified — real GitHub Actions workflow, real PR, real
+review comments. See `run_log.md` for full evidence.
+
+## Implementation
+
+Claude Code Routines need a repo `environment_id` provisioned through the
+claude.ai Settings UI (no tool in this session can do that step, confirmed
+by a real API error), so this project uses a native **GitHub Actions**
+workflow instead as the event-driven connector — a deliberate, disclosed
+trade-off: deterministic AST-based review instead of an LLM reviewer.
+
+- `.github/workflows/pr-review.yml` — triggers on `pull_request: [opened,
+  synchronize]`.
+- `review_pr.py` — scans changed `.py` files with Python's `ast` module for
+  one real bug class: a `None`-default parameter used in arithmetic with no
+  `is None` guard. Posts the finding as a real PR comment via
+  `gh pr comment`, using the auto-provided `GITHUB_TOKEN` (no extra secrets
+  needed).
+
+## Real run
+
+PR #2 (https://github.com/shuremali02/Loop_Engineering_Projects/pull/2)
+planted two such bugs in `sample_repo/shipping.py`. The workflow fired
+unprompted on `opened`, flagged both bugs by file/line/reason. A follow-up
+push (fixing the bugs) re-fired the workflow via `synchronize`, and the
+second review correctly reported clean. PR merged. Full log in
+`run_log.md`.
