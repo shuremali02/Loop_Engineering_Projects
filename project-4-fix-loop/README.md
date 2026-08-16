@@ -44,4 +44,5 @@ gh pr create --title "Fix off-by-one in days_of_stock_left" \
 ## Status
 Implemented and verified. Both reviewer verdicts (PASS on the good fix,
 FAIL with reasons on the planted bad fix) confirmed with real test runs.
-PR push pending `gh auth login` in this environment — see run_log.md.
+Real PR opened for the good fix:
+https://github.com/shuremali02/Loop_Engineering_Projects/pull/1

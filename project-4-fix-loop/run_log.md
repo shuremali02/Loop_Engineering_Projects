@@ -56,9 +56,5 @@ attempt using the same real test command as the checker, not agent
 opinion.
 
 ## PR status
-`fix/days-of-stock-off-by-one` is committed locally and ready to push.
-Opening the actual GitHub PR is pending `gh auth login` completing in
-this environment (git push here has no stored GitHub credentials — the
-earlier root-repo push was done through a different credential path).
-See README "How this was implemented" for the exact commands to finish
-this once login completes.
+Real PR opened after `gh auth login` completed:
+**https://github.com/shuremali02/Loop_Engineering_Projects/pull/1**
