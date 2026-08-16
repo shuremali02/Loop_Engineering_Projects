@@ -8,5 +8,5 @@ description: Pending — second capstone; a weekly loop that reads Project 3/8's
 Folder created and scaffolded. Not yet implemented — see `README.md` for
 the verbatim task. Depends on Project 3 or Project 8 having accumulated a
 full week of real, dated `progress.md` entries. Project 8's cron
-heartbeat (job `faec39df`, auto-expires ~2026-08-24) is currently
+heartbeat (job `ac5cede1`, auto-expires ~2026-08-24) is currently
 generating exactly that data.

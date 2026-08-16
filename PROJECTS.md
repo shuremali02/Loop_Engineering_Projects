@@ -14,7 +14,7 @@ from Project 3 or 8 and proposes rule changes as a PR.
 ---
 
 ## Project 1 — Watch Loop
-Folder: `project-1-watch-loop/`
+Folder: `project-01-watch-loop/`
 
 **Difficulty:** easy · **Uses:** Concept 4 (in-session loop)
 
@@ -29,7 +29,7 @@ can stop it cleanly, and you never sat watching the terminal.
 ---
 
 ## Project 2 — Tests Pass
-Folder: `project-2-tests-pass/`
+Folder: `project-02-tests-pass/`
 
 **Difficulty:** easy to medium · **Uses:** Concept 5 (conditional loop),
 Concept 11 (maker-checker)
@@ -45,7 +45,7 @@ or your prompt needs work. That is the lesson.
 ---
 
 ## Project 3 — Morning Brief
-Folder: `project-3-morning-brief/`
+Folder: `project-03-morning-brief/`
 
 **Difficulty:** medium · **Uses:** Concept 6 (unattended schedule),
 Concept 12 (the spine)
@@ -63,7 +63,7 @@ no memory yet.
 ---
 
 ## Project 4 — Fix Loop
-Folder: `project-4-fix-loop/`
+Folder: `project-04-fix-loop/`
 
 **Difficulty:** medium to hard · **Uses:** Concept 8 (worktree),
 Concept 9 (skill), Concept 11 (maker-checker)
@@ -81,7 +81,7 @@ checker that approves everything is no checker.
 ---
 
 ## Project 5 — Codify the Body
-Folder: `project-5-codify-body/`
+Folder: `project-05-codify-body/`
 
 **Difficulty:** medium to hard · **Uses:** the dynamic-workflows
 interlude, Concepts 8 and 11
@@ -110,7 +110,7 @@ docs win.)
 ---
 
 ## Project 6 — Doorbell Loop
-Folder: `project-6-doorbell-loop/`
+Folder: `project-06-doorbell-loop/`
 
 **Difficulty:** medium · **Uses:** Concept 7 (event-driven),
 Concept 10 (connectors)
@@ -132,7 +132,7 @@ scheduled, and event-driven.
 ---
 
 ## Project 7 — Break It On Purpose
-Folder: `project-7-break-it-on-purpose/`
+Folder: `project-07-break-it-on-purpose/`
 
 **Difficulty:** medium · **Uses:** Observability, Concept 13 (cost),
 Concept 14
@@ -156,7 +156,7 @@ it is cheap and you are watching.
 ---
 
 ## Project 8 — Your Own Daily Loop (Capstone)
-Folder: `project-8-your-own-daily-loop/`
+Folder: `project-08-your-own-daily-loop/`
 
 **Difficulty:** capstone · **Uses:** all six parts
 
@@ -176,7 +176,7 @@ fails" before you blame the model.)
 ---
 
 ## Project 9 — Rehearse a Routine for Free
-Folder: `project-9-rehearse-a-routine/`
+Folder: `project-09-rehearse-a-routine/`
 
 **Difficulty:** easy (20-30 min) · **Uses:** A1, A3 (one-off schedules),
 A5 (reading runs)

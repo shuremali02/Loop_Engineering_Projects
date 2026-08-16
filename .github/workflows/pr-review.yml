@@ -24,4 +24,4 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-        run: python3 project-6-doorbell-loop/review_pr.py
+        run: python3 project-06-doorbell-loop/review_pr.py

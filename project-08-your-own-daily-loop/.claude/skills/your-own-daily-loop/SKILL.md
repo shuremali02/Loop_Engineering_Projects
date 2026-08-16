@@ -29,7 +29,7 @@ every session).
 ## All six parts, real implementation
 
 1. **Heartbeat** — `CronCreate`, cron `17 9 * * *`, recurring, real job ID
-   `faec39df`. Auto-expires after 7 days by the scheduler's own design.
+   `ac5cede1`. Auto-expires after 7 days by the scheduler's own design.
 2. **Worktree** — `daily_lint_sweep.py` creates `.worktrees/lint-sweep-<tag>`
    per firing with retry-with-backoff (same pattern as Project 5), does
    all work there, force-removes it in a `finally` block.

@@ -8,15 +8,15 @@ See **[PROJECTS.md](./PROJECTS.md)** for the full verbatim task list and the liv
 
 | # | Project | Heartbeat / Concept | Status |
 |---|---------|---------------------|--------|
-| 1 | [watch-loop](./project-1-watch-loop) | In-session (Concept 4) | ✅ |
-| 2 | [tests-pass](./project-2-tests-pass) | Conditional (Concept 5) | ✅ |
-| 3 | [morning-brief](./project-3-morning-brief) | Scheduled (Concept 6) | ✅ |
-| 4 | [fix-loop](./project-4-fix-loop) | Worktree + maker-checker | ✅ — real [PR #1](https://github.com/shuremali02/Loop_Engineering_Projects/pull/1) |
-| 5 | [codify-body](./project-5-codify-body) | Dynamic workflows | ✅ |
-| 6 | [doorbell-loop](./project-6-doorbell-loop) | Event-driven (Concept 7) | ✅ — real [PR #2](https://github.com/shuremali02/Loop_Engineering_Projects/pull/2) |
-| 7 | [break-it-on-purpose](./project-7-break-it-on-purpose) | Cost + observability | ✅ |
-| 8 | [your-own-daily-loop](./project-8-your-own-daily-loop) | Capstone — all six parts | 🔄 running (real 7-day cron heartbeat) |
-| 9 | [rehearse-a-routine](./project-9-rehearse-a-routine) | Claude Code cloud Routine | ⏳ |
+| 1 | [watch-loop](./project-01-watch-loop) | In-session (Concept 4) | ✅ |
+| 2 | [tests-pass](./project-02-tests-pass) | Conditional (Concept 5) | ✅ |
+| 3 | [morning-brief](./project-03-morning-brief) | Scheduled (Concept 6) | ✅ |
+| 4 | [fix-loop](./project-04-fix-loop) | Worktree + maker-checker | ✅ — real [PR #1](https://github.com/shuremali02/Loop_Engineering_Projects/pull/1) |
+| 5 | [codify-body](./project-05-codify-body) | Dynamic workflows | ✅ |
+| 6 | [doorbell-loop](./project-06-doorbell-loop) | Event-driven (Concept 7) | ✅ — real [PR #2](https://github.com/shuremali02/Loop_Engineering_Projects/pull/2) |
+| 7 | [break-it-on-purpose](./project-07-break-it-on-purpose) | Cost + observability | ✅ |
+| 8 | [your-own-daily-loop](./project-08-your-own-daily-loop) | Capstone — all six parts | 🔄 running (real 7-day cron heartbeat) |
+| 9 | [rehearse-a-routine](./project-09-rehearse-a-routine) | Claude Code cloud Routine | ⏳ |
 | 10 | [secrets-drill](./project-10-secrets-drill) | Routine environment variables | ⏳ |
 | 11 | [two-routine-gate](./project-11-two-routine-gate) | Two-routine human gate | ⏳ |
 | 12 | [dreaming-loop](./project-12-dreaming-loop) | Second capstone | ⏳ |
