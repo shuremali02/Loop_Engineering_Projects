@@ -24,5 +24,44 @@ write. If you can name those two, you understand the difference between an
 engine and a loop. (Dynamic workflows are a research preview, so where
 this project and the live docs disagree, the docs win.)
 
+## How this was implemented (OpenCode-style shell script approach)
+- `sample_repo/utils.py` — 3 independent real bugs (`average`,
+  `truncate`, `is_weekend`), each caught by its own test in
+  `sample_repo/test_utils.py`.
+- `reviewer.py` — same real-exit-code reviewer as Project 4, now
+  parameterized to grade specific test target(s) per candidate.
+- `run_fixes.sh` — the single codified command:
+  - a `for` loop over 3 candidates
+  - `&` to fan each into its own `git worktree`
+  - `wait` for all three
+  - each candidate's fix applied, then graded by `reviewer.py`'s exit
+    code — never agent opinion
+  - prints one verdict table
+
+Run twice, back to back, identical output both times:
+```
+[codify-body] Verdicts:
+  - is_weekend: PASS
+  - truncate: PASS
+  - average: PASS
+```
+(Both runs — see `run_log.md` for the full transcript.)
+
+### Proving "no memory between runs" (the interlude's warning)
+After both runs, `sample_repo/utils.py` on `main` is **still buggy** —
+the script never writes back to the base, only to throwaway worktree
+copies it deletes after grading. There is no progress file either run
+could have read. Run 2 got the identical PASS table only because the
+fix logic and the bugs are both unchanged — not because anything was
+remembered.
+
+**What it would need to become a loop:**
+1. A **heartbeat** to fire `run_fixes.sh` on its own (e.g. Cron, like
+   Project 1/3), instead of a human typing the command.
+2. A **progress file** (`progress.md`, Concept 12) each run reads
+   before fanning out and writes after, so later runs could skip
+   already-fixed candidates instead of redoing identical work.
+
 ## Status
-Not yet implemented — scaffold only. Depends on Project 4 being done first.
+Implemented and verified. See `run_log.md` for both real runs and the
+no-memory proof.

@@ -4,9 +4,9 @@ import subprocess
 import sys
 
 
-def review(worktree_path):
+def review(worktree_path, test_targets):
     result = subprocess.run(
-        ["python3", "-m", "unittest", "test_utils", "-v"],
+        ["python3", "-m", "unittest", *test_targets, "-v"],
         cwd=worktree_path,
         capture_output=True,
         text=True,
@@ -16,7 +16,8 @@ def review(worktree_path):
 
 
 if __name__ == "__main__":
-    ok, stderr = review(sys.argv[1])
+    targets = sys.argv[2:] if len(sys.argv) > 2 else ["test_utils"]
+    ok, stderr = review(sys.argv[1], targets)
     print(f"[reviewer] Verdict: {'PASS' if ok else 'FAIL'}")
     print(stderr)
     sys.exit(0 if ok else 1)

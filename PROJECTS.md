@@ -176,7 +176,7 @@ fails" before you blame the model.)
 | 2 | tests-pass | ✅ Implemented & verified (unittest checker, stopped try 2/6) |
 | 3 | morning-brief | ✅ Implemented & verified (2 real runs, spine confirmed) |
 | 4 | fix-loop | ✅ Implemented & verified — real PR: [#1](https://github.com/shuremali02/Loop_Engineering_Projects/pull/1) |
-| 5 | codify-body | ⏳ README ready, not yet implemented (depends on 4) |
+| 5 | codify-body | ✅ Implemented & verified (2 identical runs, no-memory proven) |
 | 6 | doorbell-loop | ⏳ README ready, not yet implemented |
 | 7 | break-it-on-purpose | ⏳ README ready, not yet implemented (depends on 3) |
 | 8 | your-own-daily-loop | ⏳ README ready, not yet implemented (do last) |
