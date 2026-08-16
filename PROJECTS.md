@@ -175,7 +175,7 @@ fails" before you blame the model.)
 | 1 | watch-loop | ✅ Implemented & verified (real Cron loop, 1-min task) |
 | 2 | tests-pass | ✅ Implemented & verified (unittest checker, stopped try 2/6) |
 | 3 | morning-brief | ✅ Implemented & verified (2 real runs, spine confirmed) |
-| 4 | fix-loop | ⏳ README ready, not yet implemented |
+| 4 | fix-loop | ✅ Implemented & verified (real worktree fix: PASS, planted bad fix: FAIL). PR push pending gh login |
 | 5 | codify-body | ⏳ README ready, not yet implemented (depends on 4) |
 | 6 | doorbell-loop | ⏳ README ready, not yet implemented |
 | 7 | break-it-on-purpose | ⏳ README ready, not yet implemented (depends on 3) |

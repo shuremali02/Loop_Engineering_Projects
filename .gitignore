@@ -10,3 +10,6 @@ Thumbs.db
 # Editors
 .vscode/
 .idea/
+
+# Local git worktrees (Project 4 fix-loop scratch checkouts)
+.worktrees/
