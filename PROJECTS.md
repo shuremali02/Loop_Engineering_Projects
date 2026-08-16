@@ -1,8 +1,15 @@
-# Loop Engineering — All 8 Practice Projects (verbatim)
+# Loop Engineering — All 12 Projects (verbatim)
 
 Master index. Har project ka apna folder + `.claude/skills/` hai; yahan sirf
 saari verbatim task descriptions ek jagah rakhi hain taake pura course ek
 file mein dikhe.
+
+The course has **12 real deliverables total**, not 8: the 8 "Practice
+projects" (Concepts 1-6) below, plus 4 more in the "Appendix: Routines,
+end to end" — 3 hands-on drills (Projects 9-11) that use real **Claude
+Code cloud Routines** (`claude.ai/code/routines`), and a second capstone
+(Project 12, "the dreaming loop") that reads a week of `progress.md` logs
+from Project 3 or 8 and proposes rule changes as a PR.
 
 ---
 
@@ -168,6 +175,98 @@ fails" before you blame the model.)
 
 ---
 
+## Project 9 — Rehearse a Routine for Free
+Folder: `project-9-rehearse-a-routine/`
+
+**Difficulty:** easy (20-30 min) · **Uses:** A1, A3 (one-off schedules),
+A5 (reading runs)
+
+**Build.** In a throwaway repo, create a routine whose prompt does one
+small, checkable thing, for example summarizing yesterday's commits onto
+a `claude/summary` branch. Do not put it on a repeating schedule. Fire it
+with a one-off run (`/schedule tomorrow at 9am, …` or *Run now*) and read
+the full transcript, not the status column. Then change the prompt so
+the task must fail, by having it read a file that does not exist, and
+fire it once more.
+
+**Done when** you have seen two green runs: one whose transcript shows
+success, and one whose transcript shows failure. You should be able to
+say, in one sentence, why the status column could not tell them apart.
+That sentence is the A5 lesson: green means the session ended without an
+infrastructure error, nothing more.
+
+---
+
+## Project 10 — The Secrets Drill
+Folder: `project-10-secrets-drill/`
+
+**Difficulty:** easy to medium (30-45 min) · **Uses:** A4 (secrets), A2
+(the environment)
+
+**Build.** Write a prompt that needs one secret. A dummy token is fine,
+because the drill is about where the value lives, not what it unlocks.
+First run: put the token in a gitignored `.env` file and fire the
+routine. Watch it fail to find the value, and read the transcript to see
+what Claude tried instead. Second run: move the token into the
+environment-variables panel, and add the one prompt line the appendix
+recommends: "credentials are available as environment variables; do not
+look for a `.env` file."
+
+**Done when** the second run reads the token from the environment, and
+you can explain the mechanical reason the first run could not: gitignored
+files never reach GitHub, so the fresh cloud clone never contains them.
+
+---
+
+## Project 11 — Build the Two-Routine Gate
+Folder: `project-11-two-routine-gate/`
+
+**Difficulty:** medium to hard (1-2 hrs) · **Uses:** A3 (the API
+trigger), A4 (the gate), A6 (the checklist)
+
+**Build.** Routine A, on a one-off schedule, drafts something reviewable:
+a `claude/` branch, or a short summary posted through a connector.
+Routine B has an API trigger and performs one small follow-up action.
+Store B's bearer token the moment it is shown, because it is shown once.
+Review A's draft yourself. Then approve it by firing B with the `curl`
+call from A3.
+
+**Done when** three things are true: B ran only because you fired it,
+B's transcript shows the action actually happened, and you have run the
+A6 checklist over both routines, with connectors pruned, unrestricted
+pushes off, and a state file chosen. This is the human gate from Part 5,
+and now you have built it out of real parts.
+
+---
+
+## Project 12 — Build a Dreaming Loop (Second Capstone)
+Folder: `project-12-dreaming-loop/`
+
+**Difficulty:** capstone (2-3 hrs) · **Uses:** Concept 12 (spine and
+improvement loop), Concept 11 (maker-checker), Concept 6 (schedule),
+Part 5 (human gate)
+
+**Build.** You need a loop that has already run for a week and left
+dated entries in `progress.md` (Project 3 or Project 8 gives you one).
+Now build a second loop over it. On a weekly schedule, it reads all log
+entries since the date in its own `dreaming-state.md`, looks for any
+failure or correction that appears more than once, and drafts the
+smallest rules-file or skill change that would prevent it, as a PR on a
+`claude/` branch, never a direct commit. The PR description must cite
+its evidence: which runs, how often, and why this line stops it. Have it
+also propose one deletion: a rule no recent run needed. Finish by
+updating `dreaming-state.md`.
+
+**Done when** three things are true. The PR's proposed change traces to
+real, cited log entries, not a plausible-sounding guess. A deliberately
+planted repeated failure in the logs (add one by hand) gets caught and
+turned into a proposal. And nothing changed in your rules file without
+you merging it. If the loop proposes changes with no evidence attached,
+tighten the prompt: an improvement loop that guesses is worse than no
+improvement loop, because its guesses steer every future run.
+
+---
+
 ## Progress status
 
 | # | Project | Status |
@@ -180,3 +279,7 @@ fails" before you blame the model.)
 | 6 | doorbell-loop | ✅ Implemented & verified — real PR: [#2](https://github.com/shuremali02/Loop_Engineering_Projects/pull/2), GH Actions reviewer flagged planted bug unprompted, `synchronize` re-fire proven |
 | 7 | break-it-on-purpose | ✅ Implemented & verified — real silent failure reproduced + fixed, cost ≈ $0.17/month |
 | 8 | your-own-daily-loop | 🔄 In progress — real 7-day cron heartbeat running (daily lint sweep), verified once manually (real PR #3 merged), auto-expires ~2026-08-24 |
+| 9 | rehearse-a-routine | ⏳ Not yet implemented — needs a real Claude Code cloud Routine |
+| 10 | secrets-drill | ⏳ Not yet implemented — needs a real Claude Code cloud Routine |
+| 11 | two-routine-gate | ⏳ Not yet implemented — needs two real Claude Code cloud Routines |
+| 12 | dreaming-loop | ⏳ Not yet implemented — depends on a full week of Project 3 or 8 logs existing first |
