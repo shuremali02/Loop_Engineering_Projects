@@ -96,7 +96,7 @@ def main():
             print(f"  - {item}")
     else:
         print("[morning-brief] Nothing new — repo unchanged since last run.")
-    print(f"[morning-brief] progress.md updated.")
+    print("[morning-brief] progress.md updated.")
 
 
 if __name__ == "__main__":
