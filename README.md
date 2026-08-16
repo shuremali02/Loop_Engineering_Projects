@@ -1,6 +1,11 @@
 # Loop Engineering Projects
 
-Hands-on work for the [Loop Engineering crash course](https://agentfactory.panaversity.org/docs/loop-engineering-crash-course) — 12 real, working loops built one at a time, in order, with real files, real commands, and real GitHub activity (no simulated steps).
+Hands-on work for the **Loop Engineering: A Crash Course** chapter of
+**[The AI Agent Factory](https://agentfactory.panaversity.org)** (Panaversity)
+— 12 real, working loops built one at a time, in order, with real files,
+real commands, and real GitHub activity (no simulated steps).
+
+**Source:** [agentfactory.panaversity.org/docs/loop-engineering-crash-course](https://agentfactory.panaversity.org/docs/loop-engineering-crash-course)
 
 See **[PROJECTS.md](./PROJECTS.md)** for the full verbatim task list and the live progress-status table.
 
