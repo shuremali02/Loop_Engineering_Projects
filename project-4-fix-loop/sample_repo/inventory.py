@@ -9,4 +9,4 @@ def restock(current_stock, incoming):
 
 def days_of_stock_left(current_stock, daily_usage):
     """How many full days of stock remain at the current daily usage."""
-    return current_stock / daily_usage
+    return current_stock // daily_usage
