@@ -179,4 +179,4 @@ fails" before you blame the model.)
 | 5 | codify-body | ✅ Implemented & verified (2 identical runs, no-memory proven) |
 | 6 | doorbell-loop | ✅ Implemented & verified — real PR: [#2](https://github.com/shuremali02/Loop_Engineering_Projects/pull/2), GH Actions reviewer flagged planted bug unprompted, `synchronize` re-fire proven |
 | 7 | break-it-on-purpose | ✅ Implemented & verified — real silent failure reproduced + fixed, cost ≈ $0.17/month |
-| 8 | your-own-daily-loop | ⏳ README ready, not yet implemented (do last) |
+| 8 | your-own-daily-loop | 🔄 In progress — real 7-day cron heartbeat running (daily lint sweep), verified once manually (real PR #3 merged), auto-expires ~2026-08-24 |
